@@ -8,7 +8,7 @@ chmod 600 deploy_key
 ssh-add deploy_key
 git commit -m 'Compiled!' dist
 git checkout -b tmp
-git push git@github.com:roidelapluie/bootstrap.git tmp:compiled
+git push -f git@github.com:roidelapluie/bootstrap.git tmp:compiled
 else
     echo not pushing
 fi
