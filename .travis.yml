@@ -20,7 +20,7 @@ install:
   - npm install
 after_success:
   - if [ "$TWBS_TEST" = sauce-js-unit ]; then grunt/upload-preview.sh; fi
-  - if [ "$TWBS_TEST" = core ] && [[ $(node --version) == v6* ]]; then ./upload.sh; fi
+  - if [ "$TWBS_TEST" = core ] && [[ $(node --version) == v7* ]]; then ./upload.sh; fi
 cache:
   directories:
     - node_modules
